@@ -58,11 +58,25 @@ const deleteDrug = asyncHandler(async (req, res) => {
   return res.status(200).json({ message: `Delete drug for ${req.params.id}` });
 });
 
+
+const searchDrug = asyncHandler(async (req, res) => {
+  const searchTerm = req.query.term;
+  const results = await Drug.find({
+    $or: [
+      { drugName: { $regex: searchTerm, $options: "i" } },
+      { drugCode: { $regex: searchTerm, $options: "i" } },
+      { description: { $regex: searchTerm, $options: "i" } },
+    ],
+  });
+  return res.json(results);
+});
+
 module.exports = {
   getDrugs,
   getDrug,
   createDrug,
   updateDrug,
   deleteDrug,
+  searchDrug,
 };
 

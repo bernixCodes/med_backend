@@ -8,6 +8,7 @@ const {
   getDrug,
   updateDrug,
   deleteDrug,
+  searchDrug,
 } = require("../controllers/drugController");
 
 router.get("/", getDrugs);
@@ -19,5 +20,7 @@ router.post("/", createDrug);
 router.put("/:id", updateDrug);
 
 router.delete("/:id", deleteDrug);
+
+router.get("/search", searchDrug);
 
 module.exports = router;
