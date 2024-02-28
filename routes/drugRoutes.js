@@ -12,6 +12,8 @@ const {
 } = require("../controllers/drugController");
 
 router.get("/", getDrugs);
+router.get("/search", searchDrug);
+
 
 router.get("/:id", getDrug);
 
@@ -21,6 +23,5 @@ router.put("/:id", updateDrug);
 
 router.delete("/:id", deleteDrug);
 
-router.get("/search", searchDrug);
 
 module.exports = router;
