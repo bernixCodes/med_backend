@@ -33,11 +33,11 @@ To set up the backend locally and start developing or testing, follow these step
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/yourusername/pharmacy-lab-inventory-backend.git
+   git clone https://github.com/bernixCodes/med_backend.git
    ```
 2. Navigate to the project directory
    ```sh
-   cd pharmacy-lab-inventory-backend
+   cd med_backend
    ```
 3. Install npm packages
    ```sh
