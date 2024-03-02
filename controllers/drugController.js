@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Drug = require("../models/drugModel");
+
 const mongoose = require("mongoose");
 
 const getDrugs = asyncHandler(async (req, res) => {

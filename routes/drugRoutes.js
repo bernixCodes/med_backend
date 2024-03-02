@@ -12,26 +12,16 @@ const {
   deleteDrug,
 } = require("../controllers/drugController");
 
-let drugUnitPricing = [
-  { label: "Tablet", value: "Tablet" },
-  { label: "Capsule", value: "Capsule" },
-  { label: "Vials", value: "Vials" },
-  { label: "Ampule", value: "Ampule" },
-];
+const {
+  getDrugOptions,
+  addDrugOption,
+} = require("../controllers/drugOptionsController");
 
 router.get("/", getDrugs);
 
-router.get("/options", (req, res) => {
-  res.json({ drugUnitPricing });
-});
+router.get("/options", getDrugOptions);
 
-router.post("/options", (req, res) => {
-  const newOption = req.body;
-  drugUnitPricing.push(newOption);
-  res
-    .status(201)
-    .json({ message: "Option created successfully", option: newOption });
-});
+router.post("/options", addDrugOption);
 
 router.get("/:id", getDrug);
 
