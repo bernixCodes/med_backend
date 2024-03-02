@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const getDrugOptions = async (req, res) => {
   try {
-    const options = await drugOptions.find();
+    const options = await DrugOptions.find();
     res.json({ options });
   } catch (error) {
     res.status(500).json({ error: "Internal server error" });
@@ -14,7 +14,7 @@ const getDrugOptions = async (req, res) => {
 const addDrugOption = async (req, res) => {
   try {
     const newOption = req.body;
-    const option = new drugOptions(newOption);
+    const option = new DrugOptions(newOption);
     await option.save();
     res.status(201).json({ message: "Option created successfully", option });
   } catch (error) {
