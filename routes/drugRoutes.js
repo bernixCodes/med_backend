@@ -22,12 +22,12 @@ let drugUnitPricing = [
 router.get("/", getDrugs);
 
 router.get("/options", (req, res) => {
-  res.json({ options });
+  res.json({ drugUnitPricing });
 });
 
 router.post("/options", (req, res) => {
   const newOption = req.body;
-  options.push(newOption);
+  drugUnitPricing.push(newOption);
   res
     .status(201)
     .json({ message: "Option created successfully", option: newOption });
