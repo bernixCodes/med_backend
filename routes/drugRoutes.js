@@ -25,7 +25,7 @@ router.get("/options", (req, res) => {
   res.json({ options });
 });
 
-router.post("/api/options", (req, res) => {
+router.post("/options", (req, res) => {
   const newOption = req.body;
   options.push(newOption);
   res
