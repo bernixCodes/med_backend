@@ -3,7 +3,7 @@ const Lab = require("../models/labModel");
 const mongoose = require("mongoose");
 
 const getLabs = asyncHandler(async (req, res) => {
-  const allLabs = await Lab.find();
+  const allLabs = await Lab.find().sort({ createdAt: -1 });
   res.status(200).json(allLabs);
 });
 

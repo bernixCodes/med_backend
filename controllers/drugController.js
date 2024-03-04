@@ -4,7 +4,7 @@ const Drug = require("../models/drugModel");
 const mongoose = require("mongoose");
 
 const getDrugs = asyncHandler(async (req, res) => {
-  const allDrugs = await Drug.find();
+  const allDrugs = await Drug.find().sort({ createdAt: -1 });
   return res.status(200).json(allDrugs);
 });
 
