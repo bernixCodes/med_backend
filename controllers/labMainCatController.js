@@ -13,8 +13,8 @@ const getLabMainCategory = async (req, res) => {
 
 const addLabMainCategory = async (req, res) => {
   try {
-    const newOption = req.body;
-    const mainCategory = new LabMainCategory(newOption);
+    const newMainCategory = req.body;
+    const mainCategory = new LabMainCategory(newMainCategory);
     await mainCategory.save();
     res
       .status(201)
