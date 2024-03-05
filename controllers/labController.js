@@ -22,14 +22,7 @@ const getLab = asyncHandler(async (req, res) => {
 const addLab = asyncHandler(async (req, res) => {
   const { labName, labType, mainCategory, subCategory, labCode, labPrice } =
     req.body;
-  if (
-    !labName ||
-    !labType ||
-    !mainCategory ||
-    !subCategory ||
-    !labCode ||
-    !labPrice
-  ) {
+  if (!labName || !labType || !labCode || !labPrice) {
     return res.status(400).json({ msg: "All fields are required" });
   }
   const labExist = await Lab.findOne({ labName });

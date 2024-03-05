@@ -11,11 +11,9 @@ const labSchema = mongoose.Schema({
   },
   mainCategory: {
     type: String,
-    required: [true, "Lab's Main Category empty."],
   },
   subCategory: {
     type: String,
-    required: [true, "Lab's Sub Category empty."],
   },
   labCode: {
     type: String,
