@@ -17,6 +17,7 @@ const {
   addDrugOption,
 } = require("../controllers/drugOptionsController");
 
+
 router.get("/", getDrugs);
 
 router.get("/options", getDrugOptions);

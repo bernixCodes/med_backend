@@ -27,7 +27,7 @@ const createDrug = asyncHandler(async (req, res) => {
   }
   const drugExist = await Drug.findOne({ drugName });
   if (drugExist) {
-    return res.status(400).json({ mgs: "Drug already exist" });
+    return res.status(403).json({ mgs: "Drug already exist" });
   }
 
   const addDrug = await Drug.create({
