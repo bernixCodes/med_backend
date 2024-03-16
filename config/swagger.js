@@ -176,6 +176,68 @@ const options = {
           },
         },
       },
+
+      "/api/labs/{id}": {
+        put: {
+          summary: "Update a Lab",
+          tags: ["Labs"],
+          parameters: [
+            {
+              name: "id",
+              in: "path",
+              description: "ID of the lab to update",
+              required: true,
+              schema: {
+                type: "string",
+              },
+            },
+          ],
+          requestBody: {
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Lab",
+                },
+              },
+            },
+          },
+          responses: {
+            201: {
+              description: "Lab updated successfully",
+            },
+            400: {
+              description:
+                "Bad request - make sure you provide the correct data",
+            },
+          },
+        },
+
+        delete: {
+          summary: "Delete a lab",
+          tags: ["Labs"],
+          parameters: [
+            {
+              name: "id",
+              in: "path",
+              description: "ID of the lab to delete",
+              required: true,
+              schema: {
+                type: "string",
+              },
+            },
+          ],
+
+          responses: {
+            201: {
+              description: "Lab deleted successfully",
+            },
+            400: {
+              description:
+                "Bad request - make sure you provide the correct data",
+            },
+          },
+        },
+      },
     },
 
     components: {
@@ -264,7 +326,7 @@ const options = {
       },
     },
   },
-  apis: ["../routes/drugRoutes.js"],
+  apis: ["../routes/drugRoutes.js", "../routes/labRoutes.js"],
 };
 
 module.exports = options;
