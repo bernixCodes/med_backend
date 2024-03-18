@@ -9,7 +9,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:5001",
+        url: "http://localhost:5001/api",
         description: "Development server",
       },
     ],
@@ -24,7 +24,7 @@ const options = {
       },
     ],
     paths: {
-      "/api/drugs": {
+      "/drugs": {
         get: {
           summary: "Get all drugs",
           tags: ["Drugs"],
@@ -69,7 +69,7 @@ const options = {
           },
         },
       },
-      "/api/drugs/{id}": {
+      "/drugs/{id}": {
         put: {
           summary: "Update a drug",
           tags: ["Drugs"],
@@ -131,7 +131,7 @@ const options = {
         },
       },
 
-      "/api/labs": {
+      "/labs": {
         get: {
           summary: "Get all labs",
           tags: ["Labs"],
@@ -177,7 +177,7 @@ const options = {
         },
       },
 
-      "/api/labs/{id}": {
+      "/labs/{id}": {
         put: {
           summary: "Update a Lab",
           tags: ["Labs"],
