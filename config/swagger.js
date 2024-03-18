@@ -5,7 +5,7 @@ const options = {
       title: "MedTrack CRUD REST API",
       version: "1.0.0",
       description:
-        "This is MedTrack CRUD API made with Express and documented with Swagger",
+        "This API allows CRUD operations for managing drugs and labs, implemented with Express and documented using Swagger.",
     },
     servers: [
       {
@@ -16,17 +16,17 @@ const options = {
     tags: [
       {
         name: "Drugs",
-        description: "API endpoints to manage Drugs",
+        description: "Endpoints for managing drugs",
       },
       {
         name: "Labs",
-        description: "API endpoints to manage Labs",
+        description: "Endpoints for managing labs",
       },
     ],
     paths: {
       "/drugs": {
         get: {
-          summary: "Get all drugs",
+          summary: "Retrieve all drugss",
           tags: ["Drugs"],
           responses: {
             200: {
@@ -60,8 +60,7 @@ const options = {
               description: "Drug created successfully",
             },
             400: {
-              description:
-                "Bad request - make sure you provide the correct data",
+              description: "Bad request - ensure correct data provided",
             },
             403: {
               description: "Already exists - add a different item",
@@ -98,8 +97,7 @@ const options = {
               description: "Drug updated successfully",
             },
             400: {
-              description:
-                "Bad request - make sure you provide the correct data",
+              description: "Bad request - ensure correct data provided",
             },
           },
         },
@@ -124,8 +122,7 @@ const options = {
               description: "Drug deleted successfully",
             },
             400: {
-              description:
-                "Bad request - make sure you provide the correct data",
+              description: "Bad request - ensure correct data provided",
             },
           },
         },
@@ -133,7 +130,7 @@ const options = {
 
       "/labs": {
         get: {
-          summary: "Get all labs",
+          summary: "Retrieve all labs",
           tags: ["Labs"],
           responses: {
             200: {
@@ -167,8 +164,7 @@ const options = {
               description: "Lab created successfully",
             },
             400: {
-              description:
-                "Bad request - make sure you provide the correct data",
+              description: "Bad request - ensure correct data provided",
             },
             403: {
               description: "Already exists - add a different item",
@@ -206,8 +202,7 @@ const options = {
               description: "Lab updated successfully",
             },
             400: {
-              description:
-                "Bad request - make sure you provide the correct data",
+              description: "Bad request - ensure correct data provided",
             },
           },
         },
@@ -232,8 +227,7 @@ const options = {
               description: "Lab deleted successfully",
             },
             400: {
-              description:
-                "Bad request - make sure you provide the correct data",
+              description: "Bad request - ensure correct data provided",
             },
           },
         },
