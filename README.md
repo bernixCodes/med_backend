@@ -45,7 +45,7 @@ To set up the backend locally and start developing or testing, follow these step
    ```
 4. Set up environment variables
    - Create a `.env` file in the root directory
-   - Define environment variables such as `PORT`, `MONGODB_URI`, and `JWT_SECRET`
+   - Define environment variables: `PORT` and  `MONGODB_URI`
 
 5. Start the server
    ```sh
