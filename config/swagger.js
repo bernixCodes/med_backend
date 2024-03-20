@@ -4,6 +4,11 @@ const options = {
     info: {
       title: "MedTrack CRUD REST API",
       version: "1.0.0",
+      contact: {
+        name: "Bernie",
+        url: "https://github.com/bernixCodes",
+        email: "bernyx.owusu@gmail.com",
+      },
       description:
         "This API allows CRUD operations for managing drugs and labs, implemented with Express and documented using Swagger.",
     },
@@ -11,6 +16,10 @@ const options = {
       {
         url: "http://localhost:5001/api",
         description: "Development server",
+      },
+      {
+        url: "https://medtrack-restapi.onrender.com/api",
+        description: "Production server",
       },
     ],
     tags: [
