@@ -7,7 +7,6 @@ This repository contains the backend implementation of the Pharmacy and Lab Inve
 
 - **RESTful API**: Provides a set of RESTful APIs for performing CRUD operations on pharmacy and lab items.
 - **Database Integration**: Seamlessly integrates with MongoDB to store and manage inventory data.
-- **Authentication and Authorization**: Supports user authentication and authorization for secure access to the API endpoints.
 - **Error Handling**: Implements robust error handling mechanisms to ensure smooth operation and graceful degradation.
 - **Middleware**: Utilizes middleware functions for request processing and validation.
 - **Scalability**: Designed with scalability in mind to accommodate future growth and expansion.
